@@ -1,4 +1,4 @@
-import * as types from './../constants/ActionType';
+//import * as types from './../constants/ActionType';
 
 var initialState = [
     {
@@ -29,6 +29,8 @@ var initialState = [
         rating : 5
     }
 ];
+
+
 
 const products = ((state = initialState, action) =>{
     switch(action.type){

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Product from './ProductItem';
-import { connect } from 'react-redux'
 
 class ProductList extends Component {
 	render() {
