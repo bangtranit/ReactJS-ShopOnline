@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './css/component.css'
 class CartItem extends Component {
   	render() {
 		  var {product,quantity} = this.props.cart;
@@ -18,7 +18,7 @@ class CartItem extends Component {
 				<td>{product.price}$</td>
 				<td className="center-on-small-only">
 					<span className="qty">{quantity} </span>
-					<div className="btn-group radio-group" data-toggle="buttons">
+					<div className="btn-group radio-group ml-15" data-toggle="buttons">
 						<label className="btn btn-sm btn-primary
 							btn-rounded waves-effect waves-light">
 							<a>—</a>

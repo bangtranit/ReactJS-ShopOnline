@@ -12,6 +12,18 @@ var initialState = [
             rating : 3
         },
         quantity : 1
+    },
+    {
+        product:{
+            id : 2,
+            name : 'Samsung galaxy',
+            image : 'http://images.samsung.com/is/image/samsung/ae-galaxy-a8-a530-sm-a530fzkgxsg-frontblack-thumb-89823202?$PG_PRD_CARD_PNG$',
+            description : 'San pham do samsung san xuat',
+            price : 700, 
+            inventory : 13, // số lượng tồn trong kho 
+            rating : 5
+        },
+        quantity : 5
     }
 ]
 
