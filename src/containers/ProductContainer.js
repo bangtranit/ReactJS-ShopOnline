@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import ProductList from './../components/ProductList'
 import ProductItem from './../components/ProductItem'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
 
 class ProductContainer extends Component{
     render(){
@@ -40,8 +41,9 @@ ProductContainer.propTypes = {
             inventory : PropTypes.number.isRequire,
             rating : PropTypes.number.isRequire
         })
-    ).isRequire
+    ).isRequired
 }
+
 
 const mapStateToProps = state =>{
     return{

@@ -1,4 +1,4 @@
-//import * as types from './../constants/ActionType';
+// import * as types from './../constants/ActionType';
 
 var initialState = [
     {
@@ -15,7 +15,7 @@ var initialState = [
         name : 'Samsung galaxy',
         image : 'http://images.samsung.com/is/image/samsung/ae-galaxy-a8-a530-sm-a530fzkgxsg-frontblack-thumb-89823202?$PG_PRD_CARD_PNG$',
         description : 'San pham do samsung san xuat',
-        price : 700,
+        price : 700, 
         inventory : 13, // số lượng tồn trong kho 
         rating : 5
     },
@@ -30,11 +30,9 @@ var initialState = [
     }
 ];
 
-
-
 const products = ((state = initialState, action) =>{
     switch(action.type){
-        default: return state;
+        default: return [...state];
     }
 });
 
