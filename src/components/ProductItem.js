@@ -42,12 +42,14 @@ class ProductItem extends Component {
 	}
 	showRating(rating) {
 		var result = [] ;
-		for(var i = 1; i <= rating; i++){
-			result.push(<i className="fa fa-star"></i>);
+		for(var i = 1; i <= 5; i++){
+			if(i <= rating){
+				result.push(<i key={i} className="fa fa-star"></i>);
+			}else{
+				result.push(<i key={i} className="fa fa-star-o"></i>);
+			}
 		}
-		for (var j = 1; j <= 5-rating; j++){
-			result.push(<i className="fa fa-star-o"></i>);
-		}
+		
 		return result;
 	}
 }
