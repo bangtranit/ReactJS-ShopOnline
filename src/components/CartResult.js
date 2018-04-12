@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CartList from './CartList';
 
 class CartResult extends Component {
 	render() {
@@ -30,7 +29,6 @@ class CartResult extends Component {
 		if(carts){
 			for(var i = 0; i < carts.length; i++){
 				result += carts[i].product.price * carts[i].quantity;
-				console.log(carts[i].product.price);
 			}
 		}
 		return result;

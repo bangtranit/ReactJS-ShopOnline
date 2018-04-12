@@ -7,8 +7,7 @@ class ProductItem extends Component {
 			<div className="col-lg-4 col-md-6 mb-r">
 				<div className="card text-center card-cascade narrower">
 					<div className="view overlay hm-white-slight z-depth-1">
-						<img src={product.image}
-							className="img-fluid" alt={product.name} />
+						<img src={product.image} className="img-fluid" alt={product.name} />
 						<a>
 							<div className="mask waves-light waves-effect waves-light"></div>
 						</a>
@@ -30,7 +29,13 @@ class ProductItem extends Component {
 						<div className="card-footer">
 							<span className="left">{product.price}$</span>
 							<span className="right">
-								<a className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart">
+								<a 
+									className="btn-floating blue-gradient" 
+									data-toggle="tooltip" 
+									data-placement="top" 
+									title="" 
+									data-original-title="Add to Cart"
+									onClick={ ()=> this.onClickAddToCart(product) }>
 									<i className="fa fa-shopping-cart"></i>
 								</a>
 							</span>
@@ -40,6 +45,7 @@ class ProductItem extends Component {
 			</div>
 		);
 	}
+
 	showRating(rating) {
 		var result = [] ;
 		for(var i = 1; i <= 5; i++){
@@ -49,8 +55,11 @@ class ProductItem extends Component {
 				result.push(<i key={i} className="fa fa-star-o"></i>);
 			}
 		}
-		
 		return result;
+	}
+
+	onClickAddToCart = (product) => {
+		this.props.onAddToCart(product);
 	}
 }
 

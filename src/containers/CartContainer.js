@@ -9,28 +9,33 @@ import PropTypes from 'prop-types'
 class CartContainer extends Component {
     render() {
         var { carts } = this.props;
-        console.log(carts);
+        
         return (
             <CartList>
-                {this.showCarts(carts)}
+                {this.showCart(carts)}
                 {this.showAmount(carts)}
             </CartList>
         );
     }
-    showCarts = (carts) => {
-        var result = Messages.MSG_NOT_HAVE_CART;
-        if (carts) {
-            result = carts.map((cart, index) => {
+
+    showCart = (carts) => {
+        var result=Messages.MSG_NOT_HAVE_CART;
+        if (carts.length > 0) {
+            result = carts.map((cart, index) =>{
                 return <CartItem
-                    key={index}
-                    cart={cart} />
+                        key={index}
+                        cart={cart} />
             });
         }
         return result;
+
+
+
+        
     }
     showAmount = (carts) =>{
-        var result = null;
-        if(carts){
+        var result='';
+        if(carts.length > 0){
             return <CartResult carts = {carts} />
         }
         return result;
@@ -50,13 +55,12 @@ CartContainer.propTypes = {
         }).isRequired,
         quantity : PropTypes.number.isRequired
     })).isRequired
-
 }
 
 
 const mapStateToProps = state => {
     return {
-        carts: state.cart
+        carts: state.carts
     }
 }
 
