@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import products from './products';
-import carts from './carts'
+import products from './ReducerProducts';
+import carts from './ReducerCarts'
+import message from './ReducerMessage'
 
 var appReducer = combineReducers({
     products,
-    carts
+    carts,
+    message
 });
 
 export default appReducer;

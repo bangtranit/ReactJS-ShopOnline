@@ -28,11 +28,8 @@ class CartContainer extends Component {
             });
         }
         return result;
-
-
-
-        
     }
+    
     showAmount = (carts) =>{
         var result='';
         if(carts.length > 0){

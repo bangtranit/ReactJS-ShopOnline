@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux'
 class Message extends Component {
   	render() {
+          var {message} = this.props;
+          console.log(message);
 	    return (
 			<h3>
-				<span className="badge amber darken-2">Mua Hàng Thành Công !</span>
+				<span className="badge amber darken-2">{message}</span>
 			</h3>
 	    );
   	}
 }
 
-export default Message;
+const mapStateToProps = state =>{
+	return{
+        message: state.message
+    }
+}
+
+export default connect(mapStateToProps, null)(Message);
