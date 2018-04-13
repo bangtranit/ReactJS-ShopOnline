@@ -8,9 +8,16 @@ export const actAddToCart = (product, quantity) =>{
     }
 }
 
-export const changeMessage = (message) =>{
+export const changeMessage = message =>{
     return{
         type : Types.CHANGE_MESSAGE,
         message
+    }
+}
+
+export const deleteCart = product =>{
+    return{
+        type : Types.DELETE_CART,
+        product
     }
 }

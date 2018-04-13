@@ -4,7 +4,6 @@ import * as Messages from './../constants/Message'
 var intialState = Messages.MSG_WELCOME;
 
 var message = ((state = intialState, action)=>{
-    console.log(action.message);
     switch(action.type){
         case Types.CHANGE_MESSAGE: {
             state = action.message;
