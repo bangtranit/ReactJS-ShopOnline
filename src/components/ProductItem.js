@@ -4,6 +4,7 @@ import * as Types from './../constants/Message'
 class ProductItem extends Component {
 	render() {
 		var { product } = this.props;
+		console.log(product.image);
 		return (
 			<div className="col-lg-4 col-md-6 mb-r">
 				<div className="card text-center card-cascade narrower">

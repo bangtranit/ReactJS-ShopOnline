@@ -3,7 +3,8 @@ var defaultData = [
     {
         id : 1,
         name : 'iphone 6',
-        image : 'https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72',
+        image : 'https://images-fe.ssl-images-amazon.com/images/I/41qYOi0XYPL._SL500_AC_SS350_.jpg',
+        // image : "%PUBLIC_URL%/img/iphone6.png",
         description : 'San pham do Apple san xuat',
         price : 500,
         inventory : 3, // số lượng tồn trong kho 
@@ -11,9 +12,10 @@ var defaultData = [
     },
     {
         id : 2,
-        name : 'Samsung galaxy',
-        image : 'http://images.samsung.com/is/image/samsung/ae-galaxy-a8-a530-sm-a530fzkgxsg-frontblack-thumb-89823202?$PG_PRD_CARD_PNG$',
-        description : 'San pham do samsung san xuat',
+        name : 'Docome galaxy S6',
+        image : 'http://www.galaxymobile.jp/common/images/pdp/buy_docomo-galaxy-s6.png',
+        description : 'San pham do docomo san xuat',
+        // image : "./../%PUBLIC_URL%/img/docomoS6.png",
         price : 700, 
         inventory : 13, // số lượng tồn trong kho 
         rating : 5
@@ -21,8 +23,9 @@ var defaultData = [
     {
         id : 3,
         name : 'iphone X',
-        image : 'https://store.storeimages.cdn-apple.com/8561/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/x/iphone-x-gray-select-2017?wid=305&hei=358&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1515602510330',
+        image : 'https://http2.mlstatic.com/apple-iphone-x-64gb-lacrado-garantia-1-ano-nota-fiscal-D_NQ_NP_700474-MLB26700561612_012018-F.jpg',
         description : 'San pham do Apple san xuat',
+        // image : "%PUBLIC_URL%/img/iphonex.png",
         price : 1000,
         inventory : 3, // số lượng tồn trong kho 
         rating : 5
