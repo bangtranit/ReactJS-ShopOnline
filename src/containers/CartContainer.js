@@ -56,7 +56,10 @@ CartContainer.propTypes = {
             rating : PropTypes.number.isRequire
         }).isRequired,
         quantity : PropTypes.number.isRequired
-    })).isRequired
+    })).isRequired,
+    onDeleteCart : PropTypes.func.isRequired,
+    onChangeMessage : PropTypes.func.isRequired,
+    onUpdateCart : PropTypes.func.isRequired
 }
 
 

@@ -5,7 +5,6 @@ var initialState = data ? data : [];
 
 var carts = ((state = initialState, action)=>{
     var {product, quantity} = action;
-    console.log(product);
     var index = -1;
     if(state && product){
         index = findIndex(state, product);

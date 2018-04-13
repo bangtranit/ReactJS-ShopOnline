@@ -1,6 +1,5 @@
-// import * as types from './../constants/ActionType';
-
-var initialState = [
+import * as Types from './../constants/ActionType';
+var defaultData = [
     {
         id : 1,
         name : 'iphone 6',
@@ -29,11 +28,26 @@ var initialState = [
         rating : 5
     }
 ];
+var data = JSON.parse(localStorage.getItem(Types.LOCAL_STORAGE_PRODUCT));
+var initialState = data ? data : defaultData;
 
 const products = ((state = initialState, action) =>{
     switch(action.type){
         default: return [...state];
     }
 });
+
+var findIndex = (state, product) =>{
+    var index = -1;
+    if(state.length > 0){
+        for (var i = 0; i < state.length; i++){
+            if(state[i].id === product.id){
+                index = i;
+                break;
+            }
+        }
+    }
+    return index;
+}
 
 export default products;
