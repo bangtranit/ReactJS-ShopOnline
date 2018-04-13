@@ -21,14 +21,15 @@ class CartContainer extends Component {
 
     showCart = (carts) => {
         var result=Messages.MSG_NOT_HAVE_CART;
-        var {onDeleteCart, onChangeMessage} = this.props;
+        var {onDeleteCart, onChangeMessage, onUpdateCart} = this.props;
         if (carts.length > 0) {
             result = carts.map((cart, index) =>{
                 return <CartItem
                         key={index}
                         cart={cart} 
                         onDeleteCart={onDeleteCart}
-                        onChangeMessage={onChangeMessage}/>
+                        onChangeMessage={onChangeMessage}
+                        onUpdateCart={onUpdateCart}/>
             });
         }
         return result;
@@ -72,6 +73,9 @@ const mapDispatchToProps = (dispatch, props) =>{
         },
         onChangeMessage : message =>{
             dispatch(Actions.changeMessage(message));
+        },
+        onUpdateCart : (product, quantity) => {
+            dispatch(Actions.updateCart(product, quantity));
         }
     }
 }

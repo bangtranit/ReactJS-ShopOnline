@@ -4,12 +4,15 @@ var data = JSON.parse(localStorage.getItem(Types.LOCAL_STORAGE_CART));
 var initialState = data ? data : [];
 
 var carts = ((state = initialState, action)=>{
-    var index = -1;
     var {product, quantity} = action;
+    console.log(product);
+    var index = -1;
+    if(state && product){
+        index = findIndex(state, product);
+    }
 
     switch(action.type){
-        case Types.ADD_TO_CARD :{
-            index = findIndex(state, product);
+        case Types.ADD_TO_CARD: {
             if(index !== -1){
                 state[index].quantity += quantity;
             }else{
@@ -22,9 +25,15 @@ var carts = ((state = initialState, action)=>{
             return [...state];
         }
         case Types.DELETE_CART: {
-            index = findIndex(state, product);
             if (index !== -1){
                 state.splice(index,1);
+            }
+            localStorage.setItem(Types.LOCAL_STORAGE_CART, JSON.stringify(state));
+            return [...state];
+        }
+        case Types.UPDATE_CART: {
+            if(index !== -1){
+                state[index].quantity += quantity;
             }
             localStorage.setItem(Types.LOCAL_STORAGE_CART, JSON.stringify(state));
             return [...state];
